@@ -1,0 +1,380 @@
+/* ====================
+   Base Styles
+   ==================== */
+body {
+  max-width: 100vw;
+  margin: 0;
+  font-family: 'Noto Serif JP', 'EB Garamond' , serif;
+  color: #d6c8b4;
+  background-color: #352922;
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+}
+h2 {
+  font-size: 1.6rem;
+}
+h3 {
+  font-size: 1.1rem;
+}
+
+p {
+  font-size: 14px;
+}
+
+a {
+  color: #c5a45a;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+a:hover {
+  opacity: 0.7;
+}
+
+section {
+  margin: 30% 0;
+}
+
+/* header */
+header {
+  text-align: center;
+  padding: 3px 10px 0;
+  background: #1e130a;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  overflow-x: hidden;
+}
+header h1, .logo {
+  font-size: 1.6rem;
+  text-align: left;
+}
+header p {
+  font-size: 0.8rem;
+}
+/* メニュー */
+.btn-menu {
+  position: absolute;
+  top: 1px;
+  right: -10px;
+  color: #d6c8b4;
+  padding: .5rem 1rem;
+  z-index: 100;
+}
+.menu ul {
+  justify-content: space-between;
+  list-style: none;
+  margin: 0,;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+.menu ul li a {
+  color: #c5a45a;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.menu ul li a:hover {
+  opacity: 0.7;
+}
+/* メニュー開閉 */
+.menu.show {
+  display: block;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(-10px); }
+to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* index-main-visual */
+.main-visual {
+  background-image: url('../images/coffeecup-sp.png');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  width: 100%;
+  height: 550px;
+  margin-top: 0;
+}
+.main-visual .hero-text {
+  text-align: right;
+  position: relative;
+  top: 5%;
+  color: #fff;
+}
+.main-visual .hero-text p {
+  line-height: 2.5rem;
+}
+
+/* index-concept */
+.concept {
+  margin: 30% 5%;
+}
+.concept h3 {
+  margin: 5% 0 5%;
+}
+.concept p {
+  padding: 0 8% 10%;
+}
+
+/* index-menu,beans */
+.to-menu ,
+.to-beans {
+  text-align: center;
+  margin: 30% 0;
+  font-size: 14px;
+  line-height: 2rem;
+}
+.to-menu p,
+.to-beans p {
+  width: 70%;
+  margin: 10% auto;
+  z-index: 5;
+}
+.to-menu a,
+.to-beans a {
+  border: solid 1px #c5a45a;
+  border-radius: 5px;
+  padding: 5px 10px;
+  position: relative;
+  top: 20px;
+  right: -60px;
+  z-index: 5;
+}
+.to-menu {
+  position: relative;
+  padding: 30% 0;
+  overflow: hidden;
+}
+
+/* 右上に配置 */
+.to-menu .img-r {
+  position: absolute;
+  top: 0px;
+  right: 0;
+  width: 40%;
+  object-fit: cover;
+}
+
+/* 左下に配置 */
+.to-menu .img-l {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40%;
+  object-fit: cover;
+}
+
+/* index-gallery */
+.gallery {
+  width: 90%;
+  margin: 0 auto;
+  font-size: 14px;
+  text-align: center;
+}
+.gallery img {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 50%;
+  margin-top: 10%;
+}
+
+/* index-access */
+.access {
+  width: 90%;
+  margin: 30% auto;
+  font-size: 14px;
+  text-align: center;
+}
+.access .access-info {
+  line-height: 3rem;
+  margin: 10% 0;
+}
+.access .access-info h3 {
+  line-height: 2rem;
+  margin: 20% 0 5%;
+}
+.access iframe {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* menu-hero */
+.menu-hero {
+  text-align: center;
+  padding: 3px 10px 0;
+  background: #25190e;
+  position: sticky;
+  margin-top: 0;
+}
+.menu-hero p {
+  font-size: 12px;
+}
+.menu-hero ul {
+  justify-content: space-between;
+  list-style: none;
+  margin: 0,;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+.menu-hero ul li a {
+  color: #c5a45a;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.menu-hero ul li a:hover {
+  opacity: 0.7;
+}
+
+/* menu-drinks,food,sweets
+  beans-list */
+#drinks, #food, #sweets,
+.beans-list, .beans-roast, .beans-purchase{
+  width: 90%;
+  margin: 30% auto;
+}
+#drinks h2, #food h2, #sweets h2 {
+  text-align: center;
+  color: #c5a45a;
+}
+#drinks h3, #food h3, #sweets h3 {
+  margin-top: 10%;
+  color: #e6ddcf;
+}
+#drinks h4, #food h4, #sweets h4,
+.beans-list h4, .beans-roast h4, .beans-purchase h4 {
+  font-size: 12px;
+  color: #c5a45a;
+  text-align: right;
+}
+#drinks p, #food p, #sweets p,
+.beans-list p, .beans-roast p, .beans-purchase p {
+  width: 90%;
+  margin: 3% auto;
+}
+
+.beans-list h2, .beans-roast h2, .beans-purchase h2 {
+  margin: 10% 0;
+  border-bottom: #c5a45a solid 3px;
+}
+.beans-list h3, .beans-roast h3, .beans-purchase h3 {
+  margin: 10% 0 5%;
+}
+.beans-list h5, .beans-roast h5, .beans-purchase h5 {
+  text-align: right;
+  font-size: 10px;
+}
+
+.beans-hero {
+  background-image: url('../images/coffee-beans.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: right;
+  width: 100%;
+  height: 500px;
+  margin-top: 0;
+}
+
+
+
+
+/* footer */
+footer {
+  font-size: 10px;
+  text-align: center;
+}
+
+
+/* ---PCサイズ-------------------------------------------------------------- */
+@media (min-width: 600px) {
+
+  body {
+    line-height: 1.8rem;
+  }
+  .sp-br {
+    display: none;
+  }
+  h2 {
+    font-size: 3rem;
+    line-height: 4rem;
+    margin: 10% 0;
+  }
+  h3 {
+    font-size: 2rem;
+    line-height: 3rem;
+    margin: 5% 0;
+  }
+  p {
+    font-size: 1rem;
+  }
+
+  .main-nav p {
+    font-size: .8rem;
+  }
+  .main-nav ul, .menu-hero ul {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .main-visual {
+    background-image: url('../images/coffeecup.png');
+    background-position: bottom;
+    margin-top: 0;
+  }
+  .main-visual h2 {
+    margin-top: 0;
+  }
+
+  .concept {
+    width: 80%;
+    margin: 30% auto;
+  }
+  .concept p {
+    font-size: 1rem;
+  }
+
+  .to-menu p, .to-beans p {
+    font-size: 1rem;
+  }
+
+  .gallery-intro {
+    margin-bottom: 0;
+  }
+  .gallery-photos {
+    margin-top: 0;
+  }
+  .access iframe {
+  width: 100%;
+  height: 300px;
+  }
+
+  #drinks , #food , #sweets ,
+  .beans-list , .beans-roast , .beans-purchase {
+    width: 80%;
+    margin: 30% auto;
+  }
+  #drinks h4, #food h4, #sweets h4,
+  .beans-list h4, .beans-roast h4, .beans-purchase h4 {
+    font-size: 16px;
+  }
+  #drinks p, #food p, #sweets p,
+  .beans-list p, .beans-roast p, .beans-purchase p {
+    width: 80%;
+  }
+  .beans-hero h1{
+    font-size: 3rem;
+    line-height: 5rem;
+
+  }
+}
